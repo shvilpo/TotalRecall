@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotalRecall", "TotalRecall\TotalRecall.csproj", "{2A28C0BB-E607-4971-8397-FD4A8D92EC94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{6940B374-CFD9-4DF0-878C-91915D9D155C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DE0BAB6-5A7B-465A-9FF3-FB2745530ACF}
+	EndGlobalSection
+EndGlobal
