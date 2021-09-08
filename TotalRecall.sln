@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotalRecall", "TotalRecall\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{6940B374-CFD9-4DF0-878C-91915D9D155C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxing", "Boxing\Boxing.csproj", "{55260D37-CA5C-4B61-8A82-CB961F98AEBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +19,16 @@ Global
 		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55260D37-CA5C-4B61-8A82-CB961F98AEBD} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DE0BAB6-5A7B-465A-9FF3-FB2745530ACF}
