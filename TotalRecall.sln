@@ -3,17 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotalRecall", "TotalRecall\TotalRecall.csproj", "{2A28C0BB-E607-4971-8397-FD4A8D92EC94}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{6940B374-CFD9-4DF0-878C-91915D9D155C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxing", "Boxing\Boxing.csproj", "{55260D37-CA5C-4B61-8A82-CB961F98AEBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boxing", "Boxing\Boxing.csproj", "{55260D37-CA5C-4B61-8A82-CB961F98AEBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{192A77A9-C462-43AE-8FD8-0BDA4540E3FD}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
+		ProgressAndAdmonitions.txt = ProgressAndAdmonitions.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxinComparable", "BoxinComparable\BoxinComparable.csproj", "{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingInterface", "BoxingInterface\BoxingInterface.csproj", "{6F9D0849-4BEF-4A99-B412-9001D4250FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,20 +24,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A28C0BB-E607-4971-8397-FD4A8D92EC94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
+		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
+		{6F9D0849-4BEF-4A99-B412-9001D4250FE6} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DE0BAB6-5A7B-465A-9FF3-FB2745530ACF}
