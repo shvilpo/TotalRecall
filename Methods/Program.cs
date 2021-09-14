@@ -50,6 +50,7 @@ namespace Methods
     internal sealed class Rectangle
     {
         public Point m_topLeft, m_bottomRight;
+
         public Rectangle()
         {
             // В C# оператор new, использованный для создания экземпляра значимого
@@ -73,5 +74,6 @@ namespace Methods
 
         }
     }
+    
 }
 
