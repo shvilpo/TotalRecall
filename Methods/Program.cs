@@ -29,9 +29,11 @@ namespace Methods
             m_y = y;
         }
     }
+
     internal sealed class Rectangle
     {
         public Point m_topLeft, m_bottomRight;
+
         public Rectangle()
         {
             // В C# оператор new, использованный для создания экземпляра значимого
@@ -39,7 +41,9 @@ namespace Methods
             m_topLeft = new Point(1, 2);
             m_bottomRight = new Point(100, 200);
         }
-        class Program
+    }
+
+    class Program
     {
         static void Main(string[] args)
         {
@@ -47,4 +51,5 @@ namespace Methods
             Console.WriteLine(cl.ToString());
         }
     }
+    
 }
