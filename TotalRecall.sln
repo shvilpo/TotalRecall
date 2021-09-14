@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{6940B374-CFD9-4DF0-878C-91915D9D155C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boxing", "Boxing\Boxing.csproj", "{55260D37-CA5C-4B61-8A82-CB961F98AEBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Boxing", "Boxing\01 Boxing.csproj", "{55260D37-CA5C-4B61-8A82-CB961F98AEBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{192A77A9-C462-43AE-8FD8-0BDA4540E3FD}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,9 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ProgressAndAdmonitions.txt = ProgressAndAdmonitions.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxinComparable", "BoxinComparable\BoxinComparable.csproj", "{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 BoxinComparable", "BoxinComparable\02 BoxinComparable.csproj", "{F2E1C3D8-01F4-4C3C-B45C-835D0918227C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingInterface", "BoxingInterface\BoxingInterface.csproj", "{6F9D0849-4BEF-4A99-B412-9001D4250FE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 BoxingInterface", "BoxingInterface\03 BoxingInterface.csproj", "{6F9D0849-4BEF-4A99-B412-9001D4250FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{357D1246-9657-4ACD-8B4E-A690BA0994F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{EDB6024B-1D28-4589-B210-2344C22570CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,14 @@ Global
 		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9D0849-4BEF-4A99-B412-9001D4250FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357D1246-9657-4ACD-8B4E-A690BA0994F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357D1246-9657-4ACD-8B4E-A690BA0994F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357D1246-9657-4ACD-8B4E-A690BA0994F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357D1246-9657-4ACD-8B4E-A690BA0994F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB6024B-1D28-4589-B210-2344C22570CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB6024B-1D28-4589-B210-2344C22570CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB6024B-1D28-4589-B210-2344C22570CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB6024B-1D28-4589-B210-2344C22570CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +56,8 @@ Global
 		{55260D37-CA5C-4B61-8A82-CB961F98AEBD} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 		{F2E1C3D8-01F4-4C3C-B45C-835D0918227C} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 		{6F9D0849-4BEF-4A99-B412-9001D4250FE6} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
+		{357D1246-9657-4ACD-8B4E-A690BA0994F0} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
+		{EDB6024B-1D28-4589-B210-2344C22570CC} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DE0BAB6-5A7B-465A-9FF3-FB2745530ACF}
