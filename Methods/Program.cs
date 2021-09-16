@@ -63,15 +63,37 @@ namespace Methods
             return $"m_topLeft: {m_topLeft.ToString()} - bottomright: {m_bottomRight.ToString()}";
         }
     }
+    internal sealed class SomeTypeRef
+    {
+        static Int32 s_x = 5;
+        public override string ToString()
+        {
+            return $"s_x: {s_x.ToString()}";
+        }
+    }
+    internal struct SomeTypeVal
+    {
+        private static Int32 s_x = 5;
+        Int32 s_y;
+        public override string ToString()
+        {
+            return $"s_x: {s_x.ToString()}";
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Rectangle rec = new();
+            Rectangle rec = new Rectangle();
             Console.WriteLine(rec.ToString());
             Point poi = new Point();
             Console.WriteLine(poi);
 
+            SomeTypeVal val = new SomeTypeVal();
+            SomeTypeRef reff = new SomeTypeRef();
+            Console.WriteLine(val.ToString());
+            Console.WriteLine(reff .ToString());
+            Console.ReadKey();
         }
     }
     
