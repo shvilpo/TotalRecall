@@ -80,20 +80,31 @@ namespace Methods
             return $"s_x: {s_x.ToString()}";
         }
     }
-    class Program
+    #region Extension Methods
+    publis static class StringBuilderExtensions 
+    {
+        public static Int32 IndexOf(StringBuilder sb, char value) { 
+            for (int i = 0; i<sb.Length; i++)
+                if (sb[i] == value) return i;
+            return -1;  
+
+        }
+    }
+    #endregion
+    public class Program
     {
         static void Main(string[] args)
         {
-            Rectangle rec = new Rectangle();
-            Console.WriteLine(rec.ToString());
-            Point poi = new Point();
-            Console.WriteLine(poi);
+            //Rectangle rec = new Rectangle();
+            //Console.WriteLine(rec.ToString());
+            //Point poi = new Point();
+            //Console.WriteLine(poi);
 
-            SomeTypeVal val = new SomeTypeVal();
-            SomeTypeRef reff = new SomeTypeRef();
-            Console.WriteLine(val.ToString());
-            Console.WriteLine(reff .ToString());
-            Console.ReadKey();
+            //SomeTypeVal val = new SomeTypeVal();
+            //SomeTypeRef reff = new SomeTypeRef();
+            //Console.WriteLine(val.ToString());
+            //Console.WriteLine(reff .ToString());
+            //Console.ReadKey();
         }
     }
     
