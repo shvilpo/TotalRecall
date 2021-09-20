@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -81,19 +82,11 @@ namespace Methods
         }
     }
     #region Extension Methods
-    publis static class StringBuilderExtensions 
-    {
-        public static Int32 IndexOf(StringBuilder sb, char value) { 
-            for (int i = 0; i<sb.Length; i++)
-                if (sb[i] == value) return i;
-            return -1;  
 
-        }
-    }
     #endregion
-    public class Program
+    public sealed class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //Rectangle rec = new Rectangle();
             //Console.WriteLine(rec.ToString());
@@ -105,8 +98,39 @@ namespace Methods
             //Console.WriteLine(val.ToString());
             //Console.WriteLine(reff .ToString());
             //Console.ReadKey();
+            StringBuilder sb = new StringBuilder("jehk*fwfklwebfk");
+            var i = sb.Replace("*", "!").IndexOf('!');
+            Console.WriteLine(i);
+            "Grant".ShowItems();
+            List<string> list = new List<string> {"Январь", "Февраль", "Март", "Апрель"};
+            list.ShowItems();
+            Action a = "Kost".ShowItems;
+            a();
+            Console.ReadKey();
+        }
+        //public static void ShowItems<T>(this IEnumerable<T> collection)
+        //{
+        //    foreach (var item in collection) Console.WriteLine(item); 
+        //}
+    }
+
+    static class ClassUniExt
+    {
+        public static void ShowItems<T>(this IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+                Console.WriteLine(item);
+        }
+
+        /// <summary>
+        /// Returns индекс вхождения символа в строке
+        /// </summary>
+        public static Int32 IndexOf(this StringBuilder sb, char value)
+        {
+            for (int i = 0; i < sb.Length; i++)
+                if (sb[i] == value) return i;
+            return -1;
+
         }
     }
-    
 }
-

@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 BoxingInterface", "Boxin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{357D1246-9657-4ACD-8B4E-A690BA0994F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{EDB6024B-1D28-4589-B210-2344C22570CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Methods", "Methods\04 Methods.csproj", "{EDB6024B-1D28-4589-B210-2344C22570CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
