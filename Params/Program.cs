@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
@@ -57,12 +58,56 @@ namespace Params
             int i1 = 1, i2 = 2;
             SwapTRef(ref i1, ref i2);
             Console.WriteLine($"{i1}:{i2}");
-            
+            // переменные, передаваемые методу по ссылке, должны быть одного типа, объявленного в сигнатуре метода
+
             Console.WriteLine($"{SumPrefixP("prefffs", new int[]{1,2,3,4,5,6,7})}");
+
+            var varAnon1 = new {Name = "Ann", BirthDate = new DateTime(1980, 12, 27)};
+            //varAnon1.Name = "Ann2";
+            Console.WriteLine($"{varAnon1.Name}, {varAnon1.BirthDate:dd.MM.yyyy}");
+            //Console.WriteLine($"{varAnon1.ToString()}, {varAnon1.GetHashCode()}");
+            string NName = "Kate";
+            DateTime BBirtDate = DateTime.Now.Date;
+            var varAnon2 = new {NName, BBirtDate};
+            Console.WriteLine($"{varAnon1.ToString()}, {varAnon1.GetHashCode()}");
+            Console.WriteLine($"{varAnon2.ToString()}, {varAnon2.GetHashCode()}");
+
+            
+
+            var AnonPool0 = new {Name = "Alex", Age = 23, Sex = Sex.Male};
+            var AnonPool1 = new { Name = "Mila", Age = 22, Sex = Sex.Female }; 
+            var AnonPool2 = new { Name = "Bob", Age = 27, Sex = Sex.Male }; 
+            var AnonPool3 = new { Name = "Alex", Age = 23, Sex = Sex.Male };
+            var AnonPool = new[] {AnonPool0, AnonPool1, AnonPool2, AnonPool3};
+            Console.WriteLine($"before assignment:{AnonPool2 == AnonPool[2]}");
+            AnonPool[2]= new { Name = "Bobby", Age = 27, Sex = Sex.Male };
+            foreach (var anon in AnonPool) Console.WriteLine(anon);
+            Console.WriteLine($"{AnonPool0}, {AnonPool1}, {AnonPool2}, {AnonPool3}");
+            Console.WriteLine($"after assignment: {AnonPool2==AnonPool[2]}");
+
+            //AnonPool[0].Name = "Alexa"; //error - properety on anonimous type is immutable
+            // AnonPool[0]= new { Name1 = "Alex", Age = 23, Sex = Sex.Male }; //error - new anonimous type object is not some type
+            //Console.WriteLine($"{varAnon2.NName}, {varAnon2.BBirtDate:dd.MM.yyyy}");
+            //Console.WriteLine($"{AnonPool1==AnonPool4}, {AnonPool1.Equals(AnonPool4)}");
+            String myDocuments =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var query =
+                from pathname in Directory.GetFiles(myDocuments)
+                let LastWriteTime = File.GetLastWriteTime(pathname)
+                where LastWriteTime > (DateTime.Now - TimeSpan.FromDays(7))
+                orderby LastWriteTime
+                select new { Path = pathname, LastWriteTime };
+            foreach (var file in query)
+                Console.WriteLine("LastWriteTime={0}, Path={1}", file.LastWriteTime, file.Path);
             Console.ReadKey();
-            // переменные, передаваемые методу по ссылке, должны быть одного типа, объявленного в сигнатуре метода.
+            
         }
 
+        internal enum Sex
+        {
+            Male,
+            Female
+        };
         private static void GetValOut(out Int32 v) => v = 10;
         //private static void GetValOut(out Int32 v) => v += 10;
         private static void GetValRef(ref Int32 v) => v += 10;
