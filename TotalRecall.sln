@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31717.71
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{6940B374-CFD9-4DF0-878C-91915D9D155C}"
 EndProject
@@ -27,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Events", "Events\06 Events.csproj", "{FE926B78-BB2A-48CD-8CD6-423E49A29A8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualWiki", "VirtualWiki\VirtualWiki.csproj", "{DD7E290C-007E-4F87-8FCA-479FCBCE12B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventWaitHandle", "EventWaitHandle\EventWaitHandle.csproj", "{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{DD7E290C-007E-4F87-8FCA-479FCBCE12B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD7E290C-007E-4F87-8FCA-479FCBCE12B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD7E290C-007E-4F87-8FCA-479FCBCE12B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{880AFC65-BB75-4043-A3C8-CC044D3350C9} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 		{FE926B78-BB2A-48CD-8CD6-423E49A29A8F} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 		{DD7E290C-007E-4F87-8FCA-479FCBCE12B6} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
+		{89EFDC44-280E-4D03-BD23-D81BE6C4C0AA} = {6940B374-CFD9-4DF0-878C-91915D9D155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DE0BAB6-5A7B-465A-9FF3-FB2745530ACF}
