@@ -1,7 +1,7 @@
 ﻿//#define BOXING_EQUALS
 //#define BOXING_GENERICS
 //#define BOXING_UNBOXING
-#define BOXING_MANUAL
+#define BOXING_EQUALS
 #define INEFFICIENT
 using System;
 using System.Collections;
