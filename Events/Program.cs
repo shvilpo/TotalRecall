@@ -9,19 +9,28 @@ namespace Events
 {
     internal class Program
     {
+        internal static MailManager mailManager;
         static void Main(string[] args)
         {
-            MailManager mailManager = new MailManager();
-            Fax fax=new Fax(mailManager);
-            Alisa alisa = new Alisa(mailManager);
+            mailManager = new MailManager();
+            Fax fax=new Fax();
+            Alisa alisa = new Alisa();
             mailManager.SimulateNewMail("Kostretsov Vitaliy <kostr.vit@mail.com", "Pukilson Gina <ginapuk@gmail.com", "Hello from sunny Russia!");
-            fax.Unregister(mailManager);
+            fax.Unregister();
             mailManager.SimulateNewMail("Perepelkin Maxim <max.perepel@mail.com", "Nicky Alisom <alisnick@gmail.com", "Hello from dimmy Holland!");
             Console.ReadKey();
         }
     }
     // 1. Тип для хранения передаваемой информации
     //    Наследуется от типа System.EventArgs
+    //    Тип EventArgs определяется в библиотеке классов NET Framework Class Library (FCL)
+    //    и выглядит примерно следующим образом:
+    //    [ComVisible(true), Serializable]
+    //    public class EventArgs
+    //    {
+    //        public static readonly EventArgs Empty = new EventArgs();
+    //        public EventArgs() { }
+    //    }
     internal sealed class NewMailEventArgs : EventArgs
     {
         private readonly string m_from, m_to, m_subject;
@@ -35,8 +44,8 @@ namespace Events
 
     internal class MailManager
     {
-        // Событие определяется в вызывающем типе (экземпляре типа)
-        // Такой тип может уведомлять другие объекты (подписчики) о некоторых особых ситуациях
+        // Событие определяется в вызывающем типе
+        // Такой тип (экземпляр типа) может уведомлять другие объекты (подписчики) о некоторых особых ситуациях
         // События - члены типа, обеспечивающие такое взаимодействие
 
         // 2. Определение члена-события
@@ -46,7 +55,11 @@ namespace Events
         //      - имя
         public event EventHandler<NewMailEventArgs> NewMail;
         // Это означает, что  получатели уведомления о событии должны предоставлять метод обратного вызова,
-        // прототип которого соответствует типу-делегату EventHandler<NewMailEventArgs>
+        // прототип которого соответствует типу-делегату EventHandler<NewMailEventArgs>.
+        // Так как обобщенный делегат System.EventHandler определен следующим образом:
+        // public delegate void EventHandler<TEventArgs>(Object sender, TEventArgs e) where TEventArgs : EventArgs;
+        // Поэтому прототип метода должен выглядеть так:
+        // void MethodName(Object sender, NewMailEventArgs e);
 
         // 3. Определение метода, ответственного за уведомление зарегистрированных
         //    объектов о событии.
@@ -54,6 +67,7 @@ namespace Events
         //    вызываемый из класса и его потомков при возникновении события
         //    Если этот класс изолированный, нужно сделать метод закрытым или невиртуальным
         protected virtual void OnNewMail(NewMailEventArgs e) {
+            // копирование 
             EventHandler<NewMailEventArgs> temp = Volatile.Read(ref NewMail);
             if (temp != null) temp(this, e);
         }
@@ -74,12 +88,12 @@ namespace Events
     internal sealed class Fax
     {
         // Передаем конструктору объект MailManager
-        public Fax(MailManager mm)
+        public Fax()
         {
             // Создаем экземпляр делегата EventHandler<NewMailEventArgs>, ссылающийся на
             // метод обратного вызова FaxMsg
             // Регистрируем обратный вызов для события NewMail объекта MailManager
-            mm.NewMail += FaxMsg;
+            Program.mailManager.NewMail += FaxMsg;
         }
 
         // MailManager calls this method для уведомления объекта Fax о 
@@ -94,15 +108,15 @@ namespace Events
             Console.WriteLine($"------------------------------------------");
             Console.WriteLine();
         }
-        public void Unregister(MailManager mm) { 
-            mm.NewMail -= FaxMsg;
+        public void Unregister() {
+            Program.mailManager.NewMail -= FaxMsg;
         }
     }
     internal sealed class Alisa
     {
-        public Alisa(MailManager mm)
+        public Alisa()
         {
-            mm.NewMail += AlisaVoice;
+            Program.mailManager.NewMail += AlisaVoice;
         }
 
         private void AlisaVoice(object sender, NewMailEventArgs e)
@@ -115,9 +129,9 @@ namespace Events
             Console.WriteLine($"------------------------------------------");
             Console.WriteLine();
         }
-        public void Unregister(MailManager mm)
+        public void Unregister()
         {
-            mm.NewMail -= AlisaVoice;
+            Program.mailManager.NewMail -= AlisaVoice;
         }
     }
 }
